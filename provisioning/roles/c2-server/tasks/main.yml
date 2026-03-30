@@ -1,0 +1,17 @@
+---
+# This is a role for setting up the c2-server
+- name: Add host aliases
+  lineinfile:
+      path: '/etc/hosts'
+      line: "{{ item.ip }} {{ item.name }}"
+      state: present
+  loop: "{{ hosts_entries }}"
+
+- name: Install packages
+  apt:
+    pkg:
+      - nmap
+      - hydra
+      - medusa
+    update_cache: yes
+
