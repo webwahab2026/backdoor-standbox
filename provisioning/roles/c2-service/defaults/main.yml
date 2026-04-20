@@ -4,6 +4,7 @@
 client_user: cyrano
 connect_host: target
 connect_port: 8080
+
 connect_message: "lab-checkin"
 connect_timer_unit: "lab-checkin.timer"
 connect_service_unit: "lab-checkin2.service"
