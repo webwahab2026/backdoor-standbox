@@ -1,0 +1,8 @@
+---
+# defaults file for letral-mouvement
+username: cyrano
+next_target_host: next-target
+next_target_user: cyrano
+next_target_path: /tmp/synthetic-transfer/
+synthetic_payload_kb: 64
+synthetic_transfer_interval: 1min

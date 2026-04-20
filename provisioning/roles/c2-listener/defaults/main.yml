@@ -1,0 +1,6 @@
+---
+# defaults file for c2-service
+
+listen_port: 8080
+listen_log: /var/log/lab-checkin.log
+file_to_send: /var/log/local-inventory/inventory.log

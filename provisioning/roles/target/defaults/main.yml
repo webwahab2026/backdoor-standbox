@@ -1,0 +1,34 @@
+username: cyrano
+password: cyrano
+telnet_port: 2323
+flag: "Top_Secret_Flag"
+flag_2: "Cant_Guess_This"
+
+hosts_entries:
+    - { ip: "192.168.50.5", name: "target" }
+    - { ip: "192.168.40.5", name: "c2-server" }
+    - { ip: "192.168.50.6", name: "next-target" }
+
+
+files_to_copy:
+    - file1.txt
+    - file2.txt
+    - file3.sh
+
+
+files_to_create:
+    - name: file3.txt
+      content: "Hello\n"
+    - name: file4.txt
+      content: "World\n"
+
+packages_to_install:
+    - openssh-server
+
+flags:
+  - dest: "/home/{{ username }}/flag1.txt"
+    owner: "{{ username }}"
+    content: "Flag1\n"
+  - dest: "/home/{{ username }}/flag2.txt"
+    owner: "{{ username }}"
+    content: "Flag2\n"
